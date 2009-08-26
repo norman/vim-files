@@ -1,3 +1,3 @@
-My vim files. These are on Github so that I have some place central to
-keep them. I'm not a vim expert, you likely will find nothing
-particularly useful here.
+My vim files. These are on Github so that I have somewhere central to
+keep them. If they're useful for you in any way, then please feel free
+to use them.

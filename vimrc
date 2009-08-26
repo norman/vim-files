@@ -39,3 +39,7 @@ filetype plugin indent on
 if executable("ack-grep")
     set grepprg=ack-grep\ -H\ --nogroup\ --nocolor
 endif
+
+augroup mkd
+  autocmd BufRead *.md,*.markdown,*.mkd  set ai formatoptions=tcroqn2 comments=n:>
+augroup END
