@@ -15,8 +15,9 @@ autocmd FileType python   set noexpandtab
 set number
 set cindent
 set showmatch
+set ruler
 
-set incsearch
+" set incsearch
 set ignorecase
 
 set encoding=utf8
