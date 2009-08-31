@@ -16,6 +16,7 @@ set number
 set cindent
 set showmatch
 set ruler
+set ttyfast
 
 " set incsearch
 set ignorecase
@@ -49,3 +50,5 @@ highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
 autocmd BufRead *.lua,*.rockspec nmap <F4> :!lua -lluarocks.require %<CR>
+autocmd BufRead *.lua,*.rockspec nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
+autocmd BufRead *.lua,*.rockspec nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
