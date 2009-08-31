@@ -44,3 +44,8 @@ endif
 augroup mkd
   autocmd BufRead *.md,*.markdown,*.mkd  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
+
+highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
+highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
+
+autocmd BufRead *.lua,*.rockspec nmap <F4> :!lua -lluarocks.require %<CR>
