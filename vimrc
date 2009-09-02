@@ -1,5 +1,6 @@
 set nocompatible
 set nobackup
+set background=dark
 
 set tabstop=2
 set smarttab
@@ -18,7 +19,6 @@ set showmatch
 set ruler
 set ttyfast
 
-" set incsearch
 set ignorecase
 
 set encoding=utf8
@@ -49,6 +49,12 @@ augroup END
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
-autocmd BufRead *.lua,*.rockspec nmap <F4> :!lua -lluarocks.require %<CR>
-autocmd BufRead *.lua,*.rockspec nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
-autocmd BufRead *.lua,*.rockspec nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
+augroup lua
+  autocmd BufRead *.lua,*.rockspec nmap <F4> :!lua -lluarocks.require %<CR>
+  autocmd BufRead *.lua,*.rockspec nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
+  autocmd BufRead *.lua,*.rockspec nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
+augroup END
+
+augroup ruby
+  autocmd BufRead *.rb nmap <F3> :!echo; rake test<CR>
+augroup END

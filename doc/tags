@@ -41,6 +41,8 @@
 'Tlist_WinHeight'	taglist.txt	/*'Tlist_WinHeight'*
 'Tlist_WinWidth'	taglist.txt	/*'Tlist_WinWidth'*
 'loaded_nerd_tree'	NERD_tree.txt	/*'loaded_nerd_tree'*
+:Loremipsum	loremipsum.txt	/*:Loremipsum*
+:Loreplace	loremipsum.txt	/*:Loreplace*
 :MatchDebug	matchit.txt	/*:MatchDebug*
 :NERDTree	NERD_tree.txt	/*:NERDTree*
 :NERDTreeFromBookmark	NERD_tree.txt	/*:NERDTreeFromBookmark*
@@ -209,6 +211,7 @@ alignmap-tt	Align.txt	/*alignmap-tt*
 alignmap-t~	Align.txt	/*alignmap-t~*
 alignmaps	Align.txt	/*alignmaps*
 alignusage	Align.txt	/*alignusage*
+b:loremipsum_file	loremipsum.txt	/*b:loremipsum_file*
 b:match_col	matchit.txt	/*b:match_col*
 b:match_debug	matchit.txt	/*b:match_debug*
 b:match_ignorecase	matchit.txt	/*b:match_ignorecase*
@@ -223,11 +226,20 @@ b:match_wholeBR	matchit.txt	/*b:match_wholeBR*
 b:match_word	matchit.txt	/*b:match_word*
 b:match_words	matchit.txt	/*b:match_words*
 g%	matchit.txt	/*g%*
+g:loremipsum_files	loremipsum.txt	/*g:loremipsum_files*
+g:loremipsum_marker	loremipsum.txt	/*g:loremipsum_marker*
+g:loremipsum_paragraph_template	loremipsum.txt	/*g:loremipsum_paragraph_template*
+g:loremipsum_words	loremipsum.txt	/*g:loremipsum_words*
 g:tcommentMapLeader1	tComment.txt	/*g:tcommentMapLeader1*
 g:tcommentMapLeader2	tComment.txt	/*g:tcommentMapLeader2*
 g:tcommentMapLeaderOp1	tComment.txt	/*g:tcommentMapLeaderOp1*
 g:tcommentMapLeaderOp2	tComment.txt	/*g:tcommentMapLeaderOp2*
 g:tcommentOpModeExtra	tComment.txt	/*g:tcommentOpModeExtra*
+loremipsum#Generate()	loremipsum.txt	/*loremipsum#Generate()*
+loremipsum#GenerateInline()	loremipsum.txt	/*loremipsum#GenerateInline()*
+loremipsum#Insert()	loremipsum.txt	/*loremipsum#Insert()*
+loremipsum#Replace()	loremipsum.txt	/*loremipsum#Replace()*
+loremipsum.txt	loremipsum.txt	/*loremipsum.txt*
 matchit	matchit.txt	/*matchit*
 matchit-%	matchit.txt	/*matchit-%*
 matchit-\1	matchit.txt	/*matchit-\\1*
