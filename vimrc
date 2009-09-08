@@ -51,8 +51,8 @@ highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
 augroup lua
   autocmd BufRead *.lua,*.rockspec nmap <F4> :!lua -lluarocks.require %<CR>
-  autocmd BufRead *.lua,*.rockspec nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
-  autocmd BufRead *.lua,*.rockspec nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*'`<CR>
+  autocmd BufRead *.lua,*.rockspec nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'`<CR>
+  autocmd BufRead *.lua,*.rockspec nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'` \| less<CR>
 augroup END
 
 augroup ruby
