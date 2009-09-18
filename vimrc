@@ -38,10 +38,6 @@ nmap ,b :call BufferList()<CR>
 
 filetype plugin indent on
 
-if executable("ack-grep")
-    set grepprg=ack-grep\ -H\ --nogroup\ --nocolor
-endif
-
 augroup mkd
   autocmd BufRead *.md,*.markdown,*.mkd  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
@@ -53,6 +49,10 @@ augroup lua
   autocmd BufRead *.lua,*.rockspec nmap <F4> :!lua -lluarocks.require %<CR>
   autocmd BufRead *.lua,*.rockspec nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'`<CR>
   autocmd BufRead *.lua,*.rockspec nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function())' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'` \| less<CR>
+augroup END
+
+augroup json
+  autocmd BufRead *.json  set syn=json
 augroup END
 
 augroup ruby

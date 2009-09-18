@@ -135,7 +135,7 @@ if !exists('g:checksyntax_auto_lua')
     let g:checksyntax_efm_lua  = 'luac\:\ %f:%l:\ %m'
 endif
 if !exists('g:checksyntax_auto_lua')
-    let g:checksyntax_auto_lua = 1
+    let g:checksyntax_auto_lua = 0
     " let g:checksyntax_auto_lua = 0
 endif
 
