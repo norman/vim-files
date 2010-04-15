@@ -31,6 +31,7 @@ nmap ,t :execute 'TlistToggle '<CR>
 nmap ,b :call BufferList()<CR>
 nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nmap <C-t> :e **/
+nmap <F5> :make<CR>
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white

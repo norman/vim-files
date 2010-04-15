@@ -7,8 +7,19 @@ augroup filetypedetect
   au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,*.ru,*.irbrc,Capfile,Gemfile,[rR]akefile,*.builder,*.rxml,*.rjs setf ruby
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
   au Filetype ruby nmap <F3> :!echo; rake test<CR>
+  au Filetype ruby set makeprg=ruby\ -w\ %
+  au Filetype ruby set errorformat=
+      \%+E%f:%l:\ parse\ error,
+      \%W%f:%l:\ warning:\ %m,
+      \%E%f:%l:in\ %*[^:]:\ %m,
+      \%E%f:%l:\ %m,
+      \%-C%\tfrom\ %f:%l:in\ %.%#,
+      \%-Z%\tfrom\ %f:%l,
+      \%-Z%p^,
+      \%-G%.%#
 
-  au BufNewFile,BufRead *.lua,*rockspec setf lua
+
+  au BufNewFile,BufRead *.lua,*rockspec set filetype=lua makeprg=luac\ -p\ % errorformat=luac\:\ %f:%l:\ %m
   au Filetype lua nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'` \| less<CR>
   au Filetype lua nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'`<CR>
   au Filetype lua nmap <F4> :!lua %<CR>
