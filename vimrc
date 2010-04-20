@@ -35,7 +35,10 @@ set wildmode=longest,full
 nmap ,t :execute 'TlistToggle '<CR>
 nmap ,b :call BufferList()<CR>
 nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
-nmap <C-t> :e **/
+nmap <C-t> <ESC>:FufTag<CR>
+nmap <C-f> <ESC>:FufFile<CR>
+nmap <C-b> <ESC>:FufBuffer<CR>
+nmap <C-l> <ESC>:FufLine<CR>
 nmap <F5> :make<CR>
 
 " Mimic command line editing
