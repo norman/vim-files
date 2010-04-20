@@ -32,8 +32,6 @@ set ttyfast
 set vb
 set wildmode=longest,full
 
-nmap ,t :execute 'TlistToggle '<CR>
-nmap ,b :call BufferList()<CR>
 nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nmap <C-t> <ESC>:FufTag<CR>
 nmap <C-f> <ESC>:FufFile<CR>
