@@ -12,10 +12,15 @@ set expandtab
 set fileencoding=utf8
 set foldlevelstart=99
 set foldmethod=indent
-set noignorecase
+set list
+set listchars=tab:⏤⇢,trail:•
+set nobackup
 set nobackup
 set nocompatible
 set noerrorbells
+set noignorecase
+set noswapfile
+set nowritebackup
 set number
 set ruler
 set shiftwidth=2
@@ -33,6 +38,17 @@ nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nmap <C-t> :e **/
 nmap <F5> :make<CR>
 
+" Mimic command line editing
+map! <C-K> <ESC>d$
+map! <C-U> <ESC>d0
+map! <C-A> <ESC>0
+map! <C-E> <ESC>$i
+nmap <C-K> d$
+nmap <C-A> 0
+nmap <C-E> $
+
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
+
+

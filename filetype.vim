@@ -7,7 +7,8 @@ augroup filetypedetect
   au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,*.ru,*.irbrc,Capfile,Gemfile,[rR]akefile,*.builder,*.rxml,*.rjs setf ruby
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
   au Filetype ruby nmap <F3> :!echo; rake test<CR>
-  au Filetype ruby set makeprg=ruby\ -w\ %
+  au Filetype ruby nmap <F4> :!ruby %<CR>
+  au Filetype ruby set makeprg=ruby\ -c\ %
   au Filetype ruby set errorformat=
       \%+E%f:%l:\ parse\ error,
       \%W%f:%l:\ warning:\ %m,
