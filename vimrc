@@ -5,6 +5,7 @@ filetype plugin indent on
 syntax on
 
 set autoindent
+set background=dark
 set backspace=start,indent,eol
 set cindent
 set encoding=utf8
@@ -57,3 +58,5 @@ function! UpdateTags()
   silent exec ":!~/Homebrew/bin/ctags -f .tags %"
 endfunction
 autocmd BufEnter,BufWritePost *.rb,*.lua call UpdateTags()
+
+colorscheme vividchalk
