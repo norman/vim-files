@@ -13,7 +13,7 @@ set fileencoding=utf8
 set foldlevelstart=99
 set foldmethod=indent
 set list
-set listchars=tab:⏤⇢,trail:•
+set listchars=tab:⏤⇢
 set nobackup
 set nobackup
 set nocompatible
