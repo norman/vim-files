@@ -54,4 +54,8 @@ nmap <C-E> $
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
-
+set tags=.tags
+function! UpdateTags()
+  silent exec ":!~/Homebrew/bin/ctags -f .tags %"
+endfunction
+autocmd BufEnter,BufWritePost *.rb,*.lua call UpdateTags()
