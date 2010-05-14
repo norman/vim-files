@@ -2,7 +2,9 @@ autocmd FileType make     set noexpandtab
 autocmd FileType python   set noexpandtab
 
 filetype plugin indent on
+filetype indent on
 syntax on
+let mapleader=","
 
 set autoindent
 set background=dark
@@ -12,7 +14,10 @@ set encoding=utf8
 set expandtab
 set fileencoding=utf8
 set foldlevelstart=99
-set foldmethod=indent
+set foldmethod=manual
+set hidden
+set history=1000
+set incsearch
 set list
 set listchars=tab:⏤⇢
 set nobackup
@@ -24,39 +29,31 @@ set noswapfile
 set nowritebackup
 set number
 set ruler
+set scrolloff=3
 set shiftwidth=2
+set shortmess=o
 set showmatch
 set smarttab
 set tabstop=2
 set tenc=utf8
+set title
 set ttyfast
 set vb
+set wildmenu
 set wildmode=longest,full
 
-nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
-nmap <C-t> <ESC>:FufTag<CR>
-nmap <C-f> <ESC>:FufFile<CR>
-nmap <C-b> <ESC>:FufBuffer<CR>
-nmap <C-l> <ESC>:FufLine<CR>
-nmap <F5> :make<CR>
+noremap / /\v
+nnoremap ? ?\v
 
-" Mimic command line editing
-map! <C-K> <ESC>d$
-map! <C-U> <ESC>d0
-map! <C-A> <ESC>0
-map! <C-E> <ESC>$i
-nmap <C-K> d$
-nmap <C-A> 0
-nmap <C-E> $
+nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
+nmap <C-p> <ESC>:set invpaste paste?<CR>
+nmap <C-n> <ESC>:set invnumber number?<CR>
+nmap <C-c> <ESC>:TComment<CR>
+nmap <F5> :make<CR>
+nmap <C-t> :CommandT<CR>
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
-
-set tags=.tags
-function! UpdateTags()
-  silent exec ":!~/Homebrew/bin/ctags -f .tags %"
-endfunction
-autocmd BufEnter,BufWritePost *.rb,*.lua call UpdateTags()
 
 colorscheme vividchalk

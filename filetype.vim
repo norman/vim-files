@@ -25,4 +25,7 @@ augroup filetypedetect
   au Filetype lua nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'`<CR>
   au Filetype lua nmap <F4> :!lua %<CR>
 
+  au BufNewFile,BufRead *.html set filetype=html
+  au Filetype html nmap <F4> :!open -a Safari %<CR>
+
 augroup END
