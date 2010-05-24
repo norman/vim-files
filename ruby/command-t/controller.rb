@@ -197,6 +197,10 @@ module CommandT
       !!(VIM::evaluate('&term') =~ /\Axterm/)
     end
 
+    def screen?
+      !!(VIM::evaluate('&term') =~ /\Ascreen/)
+    end
+
     def vt100?
       !!(VIM::evaluate('&term') =~ /\Avt100/)
     end
@@ -231,7 +235,7 @@ module CommandT
           map override, key
         else
           [value].flatten.each do |mapping|
-            map mapping, key unless mapping == '<Esc>' && (xterm? || vt100?)
+            map mapping, key unless mapping == '<Esc>' && (xterm? || screen? || vt100?)
           end
         end
       end
