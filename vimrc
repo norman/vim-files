@@ -51,6 +51,9 @@ nmap <C-n> <ESC>:set invnumber number?<CR>
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
 nmap <C-t> :CommandT<CR>
+map <Tab> :bn<CR>
+map <S-Tab> :bp<CR>
+map <C-l> :ls<CR>
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
