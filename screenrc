@@ -25,6 +25,8 @@ screen -t shell 0
 
 bindkey ^[[5C next
 bindkey ^[[5D prev
+bindkey ^[[1;5C next
+bindkey ^[[1;5D prev
 
 setenv LC_CTYPE en_US.UTF-8
 defutf8 on
