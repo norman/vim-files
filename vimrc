@@ -50,7 +50,7 @@ nmap <C-p> <ESC>:set invpaste paste?<CR>
 nmap <C-n> <ESC>:set invnumber number?<CR>
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
-nmap <C-t> :CommandT<CR>
+" nmap <C-t> :CommandT<CR>
 map <Tab> :bn<CR>
 map <S-Tab> :bp<CR>
 map <C-l> :ls<CR>
