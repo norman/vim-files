@@ -53,6 +53,8 @@ nmap <F5> :make<CR>
 nmap <C-t> :CommandT<CR>
 map <C-l> :ls<CR>
 
+let g:CommandTCancelMap='<C-c>'
+
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
