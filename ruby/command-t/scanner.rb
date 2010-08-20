@@ -21,6 +21,8 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+require 'command-t/vim'
+
 module CommandT
   # Reads the current directory recursively for the paths to all regular files.
   class Scanner
@@ -62,8 +64,8 @@ module CommandT
     def path_excluded? path
       # first strip common prefix (@path) from path to match VIM's behavior
       path = path[(@prefix_len + 1)..-1]
-      path = Vim.escape_for_single_quotes path
-      VIM.evaluate("empty(expand(fnameescape('#{path}')))").to_i == 1
+      path = VIM::escape_for_single_quotes path
+      ::VIM::evaluate("empty(expand(fnameescape('#{path}')))").to_i == 1
     end
 
     def add_paths_for_directory dir, accumulator
