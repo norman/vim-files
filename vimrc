@@ -46,7 +46,8 @@ set wildmode=longest,full
 noremap / /\v
 nnoremap ? ?\v
 
-nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
+nmap <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+nmap <silent> <leader>t :TlistToggle<CR>
 " Toggle viewing whitespace chars
 nmap <silent> <leader>s :set nolist!<CR>
 nmap <C-p> <ESC>:set invpaste paste?<CR>
