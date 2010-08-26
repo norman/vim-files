@@ -60,3 +60,4 @@ highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
 colorscheme vividchalk
+runtime macros/matchit.vim
