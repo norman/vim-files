@@ -61,3 +61,11 @@ highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
 colorscheme vividchalk
 runtime macros/matchit.vim
+
+if has("gui_macvim")
+  colorscheme vividchalk
+  set background=dark
+  set guifont=Inconsolata:h15
+  set guioptions-=T
+  set gcr=a:blinkwait0,a:block-cursor
+endif
