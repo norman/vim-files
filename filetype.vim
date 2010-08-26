@@ -2,8 +2,6 @@ augroup filetypedetect
 
   au BufNewFile,BufRead *.json  setf json
 
-  au BufNewFile,BufRead *.md,*.markdown,*.mkd  set filetype=mkd ai formatoptions=tcroqn2 comments=n:>
-
   au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,*.ru,*.irbrc,Capfile,Gemfile,[rR]akefile,*.builder,*.rxml,*.rjs setf ruby
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
   au Filetype ruby nmap <F3> :!echo; rake<CR>
