@@ -9,18 +9,17 @@ let mapleader=","
 set autoindent
 set background=dark
 set backspace=start,indent,eol
-set cindent
 set encoding=utf8
 set expandtab
 set fileencoding=utf8
 set foldlevelstart=99
 set foldmethod=manual
+" Don't unload when switching buffers. This preserves undo history
+" while changing buffers.
 set hidden
 set history=1000
 set incsearch
-set list
-set listchars=tab:⏤⇢
-set nobackup
+set listchars=tab:>-,trail:·,eol:$
 set nobackup
 set nocompatible
 set noerrorbells
@@ -29,15 +28,18 @@ set noswapfile
 set nowritebackup
 set number
 set ruler
+" Show more context around the cursor
 set scrolloff=3
 set shiftwidth=2
+" Avoid seeing 'Press ENTER or type command to continue' as much as possible
 set shortmess=o
 set showmatch
+set smartindent
 set smarttab
 set tabstop=2
 set tenc=utf8
 set title
-set ttyfast
+" set ttyfast
 set vb
 set wildmenu
 set wildmode=longest,full
@@ -46,12 +48,13 @@ noremap / /\v
 nnoremap ? ?\v
 
 nmap ,d :execute 'NERDTreeToggle ' . getcwd()<CR>
+" Toggle viewing whitespace chars
+nmap <silent> <leader>s :set nolist!<CR>
 nmap <C-p> <ESC>:set invpaste paste?<CR>
 nmap <C-n> <ESC>:set invnumber number?<CR>
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
 nmap <C-t> :CommandT<CR>
-map <C-l> :ls<CR>
 
 let g:CommandTCancelMap='<C-c>'
 
