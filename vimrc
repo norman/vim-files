@@ -1,10 +1,9 @@
-autocmd FileType make     set noexpandtab
-autocmd FileType python   set noexpandtab
-
-filetype plugin indent on
+colorscheme vividchalk
 filetype indent on
-syntax on
+filetype plugin indent on
 let mapleader=","
+runtime macros/matchit.vim
+syntax on
 
 set autoindent
 set background=dark
@@ -62,9 +61,6 @@ let g:CommandTCancelMap='<C-c>'
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
-colorscheme vividchalk
-runtime macros/matchit.vim
-
 if has("gui_macvim")
   colorscheme vividchalk
   set background=dark
@@ -73,11 +69,13 @@ if has("gui_macvim")
   set gcr=a:blinkwait0,a:block-cursor
 endif
 
+autocmd FileType make     set noexpandtab
+autocmd FileType python   set noexpandtab
 
 augroup filetypedetect
-
+  " JSON
   au BufNewFile,BufRead *.json  setf json
-
+  " Ruby
   au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,*.ru,*.irbrc,Capfile,Gemfile,[rR]akefile,*.builder,*.rxml,*.rjs setf ruby
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
   au Filetype ruby nmap <F3> :!echo; rake<CR>
@@ -92,14 +90,12 @@ augroup filetypedetect
       \%-Z%\tfrom\ %f:%l,
       \%-Z%p^,
       \%-G%.%#
-
-
+  " Lua
   au BufNewFile,BufRead *.lua,*rockspec set filetype=lua makeprg=luac\ -p\ % errorformat=luac\:\ %f:%l:\ %m
   au Filetype lua nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'` \| less<CR>
   au Filetype lua nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'`<CR>
   au Filetype lua nmap <F4> :!lua %<CR>
-
+  " HTML
   au BufNewFile,BufRead *.html set filetype=html
   au Filetype html nmap <F4> :!open -a 'Google Chrome' %<CR>
-
 augroup END
