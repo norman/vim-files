@@ -24,6 +24,6 @@ augroup filetypedetect
   au Filetype lua nmap <F4> :!lua %<CR>
 
   au BufNewFile,BufRead *.html set filetype=html
-  au Filetype html nmap <F4> :!open -a Safari %<CR>
+  au Filetype html nmap <F4> :!open -a 'Google Chrome' %<CR>
 
 augroup END
