@@ -2,10 +2,10 @@
 " :3,23Align
 function! AlignAssigns() range
 lua << EOF
+  local assign_pat = '(.-)%s+([=>]+)%s+(.*)%s*$'
+  local buffer     = vim.buffer()
   local first      = vim.eval('a:firstline')
   local last       = vim.eval('a:lastline');
-  local buffer     = vim.buffer()
-  local assign_pat = '(.-)%s+([=>]+)%s+(.*)%s*$'
   local max        = 0
 
   -- build a table of the buffer line numbers in the range.
