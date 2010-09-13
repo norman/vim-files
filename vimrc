@@ -54,9 +54,7 @@ nmap <C-p> <ESC>:set invpaste paste?<CR>
 nmap <C-n> <ESC>:set invnumber number?<CR>
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
-nmap <C-t> :CommandT<CR>
-
-let g:CommandTCancelMap='<C-c>'
+nmap <C-t> :e **/
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
