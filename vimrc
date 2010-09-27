@@ -91,8 +91,8 @@ augroup filetypedetect
       \%-G%.%#
   " Lua
   au BufNewFile,BufRead *.lua,*rockspec set filetype=lua makeprg=luac\ -p\ % errorformat=luac\:\ %f:%l:\ %m
-  au Filetype lua nmap <F2> :!echo;tsc -f `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'` \| less<CR>
-  au Filetype lua nmap <F3> :!echo;tsc `grep -ril -e 'describe\\|context(".*", function()' * \| grep -e '.*_spec\\|_test.*' \| grep -e '\\.lua$'`<CR>
+  au Filetype lua nmap <F2> :!echo;tlua spec<CR>
+  au Filetype lua nmap <F3> :!echo;tlua test<CR>
   au Filetype lua nmap <F4> :!lua %<CR>
   au Filetype lua nmap <F6> :!shake %<CR>
   " HTML
