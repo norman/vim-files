@@ -1,11 +1,11 @@
-colorscheme vividchalk
+colorscheme solarized
 filetype on
 let mapleader=","
 runtime macros/matchit.vim
 syntax on
 
 set autoindent
-set background=dark
+set background=light
 set backspace=start,indent,eol
 set encoding=utf8
 set expandtab
@@ -18,6 +18,7 @@ set hidden
 set history=1000
 set incsearch
 set listchars=tab:>-,trail:·,eol:$
+set mouse=a
 set nobackup
 set nocompatible
 set noerrorbells
@@ -60,9 +61,9 @@ highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
 if has("gui_macvim")
-  colorscheme vividchalk
-  set background=dark
-  set guifont=Inconsolata:h15
+  colorscheme solarized
+  set background=light
+  set guifont=Inconsolata:h18
   set guioptions-=T
   set gcr=a:blinkwait0,a:block-cursor
 endif
