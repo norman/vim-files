@@ -1,5 +1,5 @@
 colorscheme solarized
-filetype on
+filetype plugin indent on
 let mapleader=","
 runtime macros/matchit.vim
 syntax on
@@ -18,7 +18,7 @@ set hidden
 set history=1000
 set incsearch
 set listchars=tab:>-,trail:·,eol:$
-set mouse=a
+" set mouse=a
 set nobackup
 set nocompatible
 set noerrorbells
