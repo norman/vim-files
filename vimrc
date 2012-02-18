@@ -7,6 +7,7 @@ syntax on
 set autoindent
 set background=light
 set backspace=start,indent,eol
+set colorcolumn=80
 set encoding=utf8
 set expandtab
 set fileencoding=utf8
