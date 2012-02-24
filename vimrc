@@ -1,3 +1,4 @@
+call pathogen#infect()
 colorscheme solarized
 filetype plugin indent on
 let mapleader=","
