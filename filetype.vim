@@ -10,7 +10,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,*.ru,*.irbrc,Capfile,Gemfile,[rR]akefile,*.builder,*.rxml,*.rjs setf ruby
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
   au Filetype ruby nmap <F3> :!echo; rake -Ilib<CR>
-  au Filetype ruby nmap <F4> :!ruby -Itest -Ispec -Ilib %<CR>
+  au Filetype ruby nmap <F4> :!ruby -I. -Itest -Ispec -Ilib %<CR>
   au Filetype ruby setlocal makeprg=ruby\ -c\ %
   au Filetype ruby setlocal errorformat=
       \%+E%f:%l:\ parse\ error,
@@ -34,5 +34,6 @@ augroup filetypedetect
 
   " C
   au Filetype c setlocal shiftwidth=4 tabstop=4
+  au Filetype c nmap <F3> :!echo; make test<CR>
 
 augroup END
