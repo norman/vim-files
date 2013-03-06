@@ -48,8 +48,10 @@ set wildmode=longest,full
 noremap / /\v
 nnoremap ? ?\v
 
+" Various plugin type things
 nmap <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nmap <silent> <leader>t :TlistToggle<CR>
+nmap <silent> <leader>g :GitGutterToggle<CR>
 " Toggle viewing whitespace chars
 nmap <silent> <leader>s :set nolist!<CR>
 nmap <C-p> <ESC>:set invpaste paste?<CR>
@@ -57,6 +59,7 @@ nmap <C-n> <ESC>:set invnumber number?<CR>
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
 nmap <C-t> :e **/
+
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
