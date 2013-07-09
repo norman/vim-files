@@ -31,6 +31,11 @@ set number
 set ruler
 " Show more context around the cursor
 set scrolloff=3
+
+" Open new splits to the bottom right
+set splitbelow
+set splitright
+
 set shiftwidth=2
 " Avoid seeing 'Press ENTER or type command to continue' as much as possible
 set shortmess=o
