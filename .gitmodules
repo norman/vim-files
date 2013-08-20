@@ -40,3 +40,6 @@
 [submodule "bundle/buffkill.vim"]
 	path = bundle/buffkill.vim
 	url = git://github.com/vim-scripts/bufkill.vim.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
