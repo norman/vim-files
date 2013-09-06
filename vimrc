@@ -8,7 +8,7 @@ syntax on
 set autoindent
 set background=light
 set backspace=start,indent,eol
-set colorcolumn=80
+" set colorcolumn=80
 set encoding=utf8
 set expandtab
 set fileencoding=utf8
@@ -63,7 +63,13 @@ nmap <C-p> <ESC>:set invpaste paste?<CR>
 nmap <C-n> <ESC>:set invnumber number?<CR>
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
-nmap <C-t> :e **/
+nmap <C-Left> :tabprevious<CR>
+nmap <C-Right> :tabnext<CR>
+
+" Don't map C-p to CtrlP, I'm using that for toggling paste mode.
+" Use Control-T instead, I'm more used to that.
+let g:ctrlp_map = '<C-t>'
+" nmap <C-t> :CtrlP<CR>
 
 
 " highlighting for the completion menu
@@ -80,3 +86,4 @@ endif
 
 autocmd FileType make     set noexpandtab
 autocmd FileType python   set noexpandtab
+
