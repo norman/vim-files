@@ -5,7 +5,7 @@ lua << EOF
   local assign_pat = '(.-)%s+([=>]+)%s+(.*)%s*$'
   local buffer     = vim.buffer()
   local first      = vim.eval('a:firstline')
-  local last       = vim.eval('a:lastline');
+  local last       = vim.eval('a:lastline')
   local max        = 0
 
   -- Get the length of the longest string before an assignment.
