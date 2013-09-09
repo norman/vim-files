@@ -66,6 +66,8 @@ nmap <F5> :make<CR>
 nmap <C-Left> :tabprevious<CR>
 nmap <C-Right> :tabnext<CR>
 
+let NERDTreeHijackNetrw=1
+
 " Don't map C-p to CtrlP, I'm using that for toggling paste mode.
 " Use Control-T instead, I'm more used to that.
 let g:ctrlp_map = '<C-t>'
