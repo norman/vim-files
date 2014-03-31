@@ -1,12 +1,11 @@
 call pathogen#infect()
-colorscheme solarized
 filetype plugin indent on
 let mapleader=","
-runtime macros/matchit.vim
+runtime! macros/matchit.vim
 syntax on
 
 set autoindent
-set background=light
+set background=dark
 set backspace=start,indent,eol
 " set colorcolumn=80
 set encoding=utf8
@@ -45,7 +44,6 @@ set smarttab
 set tabstop=2
 set tenc=utf8
 set title
-" set ttyfast
 set vb
 set wildmenu
 set wildmode=longest,full
@@ -53,14 +51,11 @@ set wildmode=longest,full
 noremap / /\v
 nnoremap ? ?\v
 
-" Various plugin type things
 nmap <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-nmap <silent> <leader>t :TlistToggle<CR>
-nmap <silent> <leader>g :GitGutterToggle<CR>
-" Toggle viewing whitespace chars
 nmap <silent> <leader>s :set nolist!<CR>
-nmap <C-p> <ESC>:set invpaste paste?<CR>
-nmap <C-n> <ESC>:set invnumber number?<CR>
+nmap <silent> <leader>p :set invpaste paste?<CR>
+nmap <silent> <leader>n :set invnumber number?<CR>
+
 nmap <C-c> <ESC>:TComment<CR>
 nmap <F5> :make<CR>
 nmap <C-j> :tabprevious<CR>
@@ -68,19 +63,16 @@ nmap <C-k> :tabnext<CR>
 
 let NERDTreeHijackNetrw=1
 
-" Don't map C-p to CtrlP, I'm using that for toggling paste mode.
-" Use Control-T instead, I'm more used to that.
+" Use Control-T instead of Control-P, I'm more used to that.
 let g:ctrlp_map = '<C-t>'
-" nmap <C-t> :CtrlP<CR>
-
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
 highlight PmenuSel guibg=white guifg=blue ctermbg=white ctermfg=blue
 
 if has("gui_macvim")
-  colorscheme solarized
-  set background=light
+  colorscheme koehler
+  set background=dark
   set guifont=Inconsolata:h18
   set guioptions-=T
   set gcr=a:blinkwait0,a:block-cursor
