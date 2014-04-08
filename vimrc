@@ -19,7 +19,8 @@ set hidden
 set history=1000
 set incsearch
 set listchars=tab:>-,trail:·,eol:$
-" set mouse=a
+set mouse=a
+set ttymouse=xterm2
 set nobackup
 set nocompatible
 set noerrorbells
