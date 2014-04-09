@@ -38,7 +38,7 @@ set splitright
 
 set shiftwidth=2
 " Avoid seeing 'Press ENTER or type command to continue' as much as possible
-set shortmess=o
+set shortmess=oT
 set showmatch
 set smartindent
 set smarttab
