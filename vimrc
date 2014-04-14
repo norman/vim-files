@@ -82,3 +82,6 @@ endif
 autocmd FileType make     set noexpandtab
 autocmd FileType python   set noexpandtab
 
+hi TabLine      ctermfg=Black  ctermbg=Gray     cterm=NONE
+hi TabLineFill  ctermfg=Black  ctermbg=Gray     cterm=NONE
+hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE

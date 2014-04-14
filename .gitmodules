@@ -40,3 +40,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/tabline"]
+	path = bundle/tabline
+	url = https://github.com/mkitt/tabline.vim.git
