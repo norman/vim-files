@@ -51,6 +51,8 @@ set wildmode=longest,full
 
 noremap / /\v
 nnoremap ? ?\v
+" Stop from accidentally entering ex mode.
+nnoremap Q <nop>
 
 nmap <silent> <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nmap <silent> <leader>s :set nolist!<CR>
