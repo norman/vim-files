@@ -9,7 +9,7 @@ augroup filetypedetect
   " Ruby
   au BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,*.ru,*.irbrc,Capfile,Gemfile,[rR]akefile,*.builder,*.rxml,*.rjs setf ruby
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
-  au Filetype ruby nmap <buffer> <F3> :!echo; zeus rake test TEST=%<CR>
+  au Filetype ruby nmap <buffer> <F3> :!echo; rake test TEST=%<CR>
   au Filetype ruby nmap <buffer> <F4> :!ruby -I. -Itest -Ispec -Ilib %<CR>
   au Filetype ruby setlocal makeprg=ruby\ -c\ %
   au Filetype ruby setlocal errorformat=
