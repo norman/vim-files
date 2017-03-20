@@ -37,3 +37,6 @@
 [submodule "bundle/vim-bufkill"]
 	path = bundle/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill
+[submodule "bundle/vim-autotag"]
+	path = bundle/vim-autotag
+	url = git://github.com/craigemery/vim-autotag.git
