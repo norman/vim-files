@@ -11,6 +11,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.erb,*.rhtml setf eruby
   au Filetype ruby nmap <buffer> <F3> :!echo; rake test TEST=%<CR>
   au Filetype ruby nmap <buffer> <F4> :!ruby -I. -Itest -Ispec -Ilib %<CR>
+  au Filetype ruby nmap <buffer> <F6> :!spring rspec %<CR>
   au Filetype ruby setlocal makeprg=ruby\ -c\ %
   au Filetype ruby setlocal errorformat=
       \%+E%f:%l:\ parse\ error,
