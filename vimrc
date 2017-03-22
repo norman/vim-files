@@ -5,6 +5,8 @@ runtime! macros/matchit.vim
 syntax on
 
 set autoindent
+set autoread
+
 set background=dark
 set backspace=start,indent,eol
 " set colorcolumn=80
@@ -43,6 +45,8 @@ set showmatch
 set smartindent
 set smarttab
 set tabstop=2
+" Work around case-insensitivity on macOS
+set tags=tags
 set tenc=utf8
 set title
 set vb
@@ -68,6 +72,8 @@ let NERDTreeHijackNetrw=1
 
 " Use Control-T instead of Control-P, I'm more used to that.
 let g:ctrlp_map = '<C-t>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+nmap <silent> <leader>t :CtrlPTag<CR>
 
 " highlighting for the completion menu
 highlight Pmenu guibg=blue guifg=white ctermbg=blue ctermfg=white
