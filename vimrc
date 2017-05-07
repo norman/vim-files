@@ -70,8 +70,7 @@ nmap <C-k> :tabnext<CR>
 
 let NERDTreeHijackNetrw=1
 
-" Use Control-T instead of Control-P, I'm more used to that.
-let g:ctrlp_map = '<C-t>'
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 nmap <silent> <leader>t :CtrlPTag<CR>
 
