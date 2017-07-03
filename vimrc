@@ -9,7 +9,8 @@ set autoread
 
 set background=dark
 set backspace=start,indent,eol
-" set colorcolumn=80
+let &colorcolumn=join(range(124,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 set encoding=utf8
 set expandtab
 set fileencoding=utf8
