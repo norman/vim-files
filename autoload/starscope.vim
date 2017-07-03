@@ -28,7 +28,7 @@ function starscope#Update()
         echo "Cannot find starscope gem in PATH"
         return
     endif
-    let cmd = "find . -name *.rb | xargs starscope -e ctags -e cscope"
+    let cmd = "find . -name *.rb | xargs starscope -e cscope"
     silent! execute s:GetRunner() . cmd
     call s:addCscopeFile()
     redraw!
