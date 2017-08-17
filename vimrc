@@ -3,14 +3,16 @@ filetype plugin indent on
 let mapleader=","
 runtime! macros/matchit.vim
 syntax on
+colorscheme flattened_light
 
 set autoindent
 set autoread
 
-set background=dark
+set background=light
 set backspace=start,indent,eol
 let &colorcolumn=join(range(124,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
+highlight ColorColumn ctermbg=7 guibg=#2c2d27
+
 set encoding=utf8
 set expandtab
 set fileencoding=utf8
