@@ -97,6 +97,9 @@ let g:sql_type_default = 'pgsql'
 " Strip trailing whitespace
 autocmd FileType ruby,javascript,lua,bash,haml,html autocmd BufWritePre <buffer> %s/\s\+$//e
 
+" Use Mac clipboard
+set clipboard=unnamed
+
 " Tests
 let test#strategy = "dispatch"
 nmap <silent> <leader>N :TestNearest<CR>
